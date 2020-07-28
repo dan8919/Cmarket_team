@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="g.o.o">
+
+
+
+
+<insert id="insert" >
+insert into food (gno,cno,gname,price) values (#{gno} ,#{cno},#{gname},#{price})
+</insert>
+
+
+<select id="getCheckGno" resultType="GoodsVO">
+select * from food where gno = #{gno}
+</select>
+
+
+<select id="goodsList" resultType="GoodsVO">
+select * from food 
+</select>
+
+</mapper> 
+
+
+
+
